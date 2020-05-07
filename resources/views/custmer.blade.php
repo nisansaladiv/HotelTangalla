@@ -56,9 +56,10 @@ body{
 }
 label{
     color:#555;
-    
+  
    
 }
+
 h3{
     text-align:center;
 }
@@ -104,9 +105,12 @@ h3{
   <div class="container" style="margin-top:10%;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
  
     <div class="row">
-      <div class="col-sm-6" style="background-color:#eee;">
-         <form  method="post" action="{{ route('homes')}}">
-          {{ csrf_field() }} 
+      <div class="col-sm-6" style="background-color: #2c3e50 ;">
+        <i class="fa fa-user" style='font-size:200px;color:#ccc;margin-left:39%;margin-top:20%;'></i>
+        <label style='font-size:44pt;margin-left:15%;'>Turtle Paradise</label> 
+        <label style='font-size:36pt;margin-left:20%;'>Turtle Paradise</label> 
+        <!--<form  method="post" action="{//{ route('homes')}}">
+          {//{ csrf_field() }} 
         <div class="form-group" style="margin-top:5%;">
             <i class="fa fa-user" style='font-size:150px;color:#ccc;margin-left:39%;'></i>
             <h3>LOGIN</h3>
@@ -129,27 +133,14 @@ h3{
         </div>
         <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
         
-    </form></div>
+    </form>--></div>
     
         <div class="col-sm-6" style="background-color:#fff;">
              <form action="{{ route('sing')}}" method="post">
               {{ csrf_field() }} 
-           <div class="form-group" style="margin-top:10%;">
-            <div class="row">
-                @if (count($errors) > 0)
-                 <div class="alert alert-danger">
-                     <ul>
-                         @foreach ($errors->all() as $error)
-                             <li>{{ $error }}</li>
-                         @endforeach
-                     </ul>
-                 </div>
-             @endif</div>
-             @if (session()->has('message'))
-             <div class="alert alert-success">
-                 {{session ()->get ('message')}}
-                 </div>  
-             @endif
+      
+            
+              <div class="form-group" style="margin-top:10%;">
                <label>Full Name</label>
                <input type="text" name="username"class="form-control" value="">
                <span class="help-block"></span>
@@ -185,16 +176,23 @@ h3{
   
             <span class="help-block"></span>
         </div>
-           <div class="form-group">
+
+        <div class="form-group">
+          <label>ID</label>
+        <input type="text" name="id" class="form-control" value="{{$id}}" readonly="true">
+          <span class="help-block"></span>
+      </div>
+          <!-- <div class="form-group" style="display:none;">
                <label>Password</label>
-               <input type="password" name="password" class="form-control">
+               <input type="password" name="password" class="form-control" value="user@123">
                <span class="help-block"></span>
            </div>
-           <div class="form-group">
+
+           <div class="form-group" style="display:none;">
             <label>Conform Password</label>
             <input type="text" name="cpass" class="form-control">
             <span class="help-block"></span>
-        </div>
+        </div>-->
            <div class="form-group">
                <input type="submit" class="btn btn-primary" value="Submit">
            </div>

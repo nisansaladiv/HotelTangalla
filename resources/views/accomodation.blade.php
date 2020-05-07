@@ -23,7 +23,8 @@
   <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
+  <link rel="stylesheet" type="text/css" href="../css/jquery.datetimepicker.min.css"/>
+  <script src="../js/jquery.datetimepicker.js"></script>
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.min.css" rel="stylesheet">
 
@@ -45,17 +46,21 @@
 
 <!--Font Awesome (added because you use icons in your prepend/append)-->
 <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
-
+<link rel="stylesheet" href="csss/style.css">
 <!-- Inline CSS based on choices in "Settings" tab -->
 <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
 <link rel="stylesheet" type="text/css" href="../css/jquery.datetimepicker.min.css"/>
 <script src="../js/jquery.datetimepicker.js"></script>
+<script src="jss/modernizer.js"></script>
+
 <style>
 html body .heading a {
   color: #2e5266;
 
 }
-
+body{
+  background-color: #fff;
+}
 html body .heading a .fab {
   margin-right: 0.5rem;
   font-size: 1.5rem;
@@ -84,10 +89,10 @@ ul.cb-slideshow{
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 .btn{
-    margin-top: 15%;
+    margin-top:5%;
 }
 .la{
-    color: #fff;
+    color:#212529;
 }
 .container > header {
     padding: 156px 30px 10px 20px;
@@ -115,195 +120,172 @@ table,td,th{
     box-shadow: none;
     background-color: #d55110e6;
 }
+.banner {
+    background: url(../images/ab8.jpg) no-repeat ;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    min-height: 100%;
+ 
+  }
+  .mb-2, .my-2 {
+    margin-bottom: 2.5rem !important;
+}
  </style>
-<body id="page-top">
-  <div id="preloder">
-    <div class="loader"></div>
-</div>
+<body>
+ 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">LOGO</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href='{!! url('/'); !!}'>HOME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{!! url('/accomodation'); !!}">ACCOMMODATION</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">ACTIVITIES</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href='{!! url('/gallery'); !!}'>GALLERY</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">RESTAURAN</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href='{!! url('/contactus'); !!}'>CONTACT USA</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+ 
 
   <!-- Masthead -->
-  <body id="page">
-    <ul class="cb-slideshow">
-        <li><span></span><div><h3></h3></div></li>
-        <li><span></span><div><h3></h3></div></li>
-        <li><span></span><div><h3></h3></div></li>
-        <li><span></span><div><h3></h3></div></li>
-        <li><span></span><div><h3></h3></div></li>
-        <li><span></span><div><h3></h3></div></li>
-    </ul>
-    <div class="container">
-   <!-- Codrops top bar -->
-        <div class="codrops-top">
-
-            <span class="right">
-               
-            </span>
-            <div class="clr"></div>
-        </div><!--/ Codrops top bar -->
-        <header>
-    <p class="codrops-demos">
-      @if (count($errors) > 0)
-      <div class="alert alert-danger">
-          <ul>
-              @foreach ($errors->all() as $error)
-               <li>{{ $error }}</li>
-             @endforeach
-              </ul>
-           </div>
-          @endif
-         <div class="container">
-                  <form action="{{ route('singup')}}" method="POST">
-                    <div class="row">
-               
-                    <div class="col-lg-2">
+  <body>
+    <div id="banner" class="banner full-screen-mode parallax">
+      <div class="container pr">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="banner-static">
+                  <div class="banner-text">
+                      <div class="banner-cell">
+                        <h1>Turtle Paradise  <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Hotel" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                        <h2>Tangalle</h2>
+                      </div> 
+                      </div>     
+                  <!-- end banner-text -->
+              </div>
+              <!-- end banner-static -->
+          </div>
+          <!-- end col -->
+      </div>
+      <!-- end container -->
+  </div>
+  <div id="about" class="about-main pad-top-100 pad-bottom-100">
+    <div class="container" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background-color: #fff;">
+        
+      <div class="row">
+          <p class="codrops-demos">
+            @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                     <li>{{ $error }}</li>
+                   @endforeach
+                    </ul>
+                 </div>
+                @endif
+               <div class="container">
+                <h1 style="margin-top:20px;">Accomadation</h1>
+                <form action="{{ route('singup')}}" method="POST">
+                  <div class="row">
+                    <div class="col-md-6">
                       <label for="exampleFormControlFile1" class="la">Check in</label>
                       <input type="text" id="datet2" readonly="true" name="sdate" class="form-control" required>
-                          </div>
-                     <div class="col-lg-2">
-                        <label for="exampleFormControlFile1" class="la">Check Out</label>
-                        <input type="text" id="work" readonly="true" name="edate" class="form-control" required>
-                            </div>
-                   
-                      <div class="col-lg-2">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="exampleFormControlFile1" class="la">Check Out</label>
+                      <input type="text" id="work" readonly="true" name="edate" class="form-control" required>
+                    </div>
+                  </div>
+                  <form>
+                    <div class="row">
+                      <div class="col-md-6">
                         <label for="exampleFormControlFile1" class="la">Number of Nights</label>
-                        <input class="form-control" type="text" placeholder="Number of Nights" name="num_night">
-                        </div>
-                      <div class="col-lg-2">
+                              <input class="form-control" type="text" placeholder="Number of Nights" name="num_night">
+                      </div>
+                      <div class="col-md-6">
                         <label for="exampleFormControlFile1" class="la">Adults</label>
                         <input class="form-control" type="text" placeholder="Adults" name="adults">
-                        </div>
-                      <div class="col-lg-2">
-                        <label for="exampleFormControlFile1" class="la">Children</label>
-                        <input class="form-control" type="text" placeholder="Children" name="childr">
-                        </div>
-                            <div class="col-lg-2">
-                        <button type="submit" class="btn btn-primary mb-2" name="save"> Checking</button>
-                        {{ csrf_field() }} 
                       </div>
-                     
+                    </div>
+                    <form>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="exampleFormControlFile1" class="la">Children</label>
+                              <input class="form-control" type="text" placeholder="Children" name="childr">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="exampleFormControlFile1" class="la">Accomdation</label>
+                          <select class="form-control" name="cata" id="myselect">
+                            @foreach($accomodation as $category)
+                            <option value="{{$category->id}}">{{$category->rooms_type }}</option>
+                            @endforeach
+                          </select>
+                          
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                       
+                        <div class="col-md-12">
+                          <button type="submit" class="btn btn-primary mb-2" name="save"> Checking Aavilble</button>
+                        {{ csrf_field() }}
+                        </div>
                       </div>
                     </form>
-                </div>
-             
-              </p> 
-        </header>
-        
-    </div>
-    <div class="container">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Sleeps</th>
-            <th>Room type</th>
-            <th>Prices</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><i class="fas fa-user-alt"  style='font-size:25px;color:orange'><i class="fas fa-user-alt"  style='font-size:25px;color:orange'></i></td>
-            <td><a href="#" style="color:#1af2e5 ;">Standard Double Room </a><br>1 extra-large double bed  </td>
-            <td><button type="submit" class="btn btn-primary mb-2" style="background-color:#ffff00;border: #ffff00; color:#4d4d4d;"> Prices</button></td>
-          </tr>
-          <tr>
-            <td><i class="fas fa-user-alt"  style='font-size:25px;color:orange'><i class="fas fa-user-alt"  style='font-size:25px;color:orange'></i><i class="fas fa-user-alt"  style='font-size:25px;color:orange'><i class="fas fa-user-alt"  style='font-size:25px;color:orange'></i>+<i class="fas fa-user-alt"  style='font-size:25px;color:orange'><i class="fas fa-user-alt"  style='font-size:25px;color:orange'></i></td>
-            <td><a href="#" style="color:#1af2e5 ;">Family Room with Balcony</a> <br>2 extra-large double beds or 1 single bed and 1 double bed 
-          </td>
-            <td><button type="submit" class="btn btn-primary mb-2" style="background-color:#ffff00;border: #ffff00; color:#4d4d4d;"> Prices</button></td>
-          </tr>
-          <tr>
-            <td><i class="fas fa-user-alt"  style='font-size:25px;color:orange'><i class="fas fa-user-alt"  style='font-size:25px;color:orange'></i><i class="fas fa-user-alt"  style='font-size:25px;color:orange'></i></td>
-            <td><a href="#" style="color:#1af2e5 ;">Deluxe Double Room with Balcony</a><br> 1 extra-large double bed 
-              </td>
-            <td><button type="submit" class="btn btn-primary mb-2" style="background-color:#ffff00;border: #ffff00; color:#4d4d4d;"> Prices</button></td>
-          </tr>
-          <tr>
-            <td><i class="fas fa-user-alt"  style='font-size:25px;color:orange'><i class="fas fa-user-alt"  style='font-size:25px;color:orange'></i><i class="fas fa-user-alt"  style='font-size:25px;color:orange'></i>+<i class="fas fa-user-alt"  style='font-size:25px;color:orange'></i></td>
-            <td><a href="#" style="color:#1af2e5 ;">Triple Room</a> <br>1 single bed and 1 extra-large double bed 
-              
-              </td>
-            <td><button type="submit" class="btn btn-primary mb-2" style="background-color:#ffff00;border: #ffff00; color:#4d4d4d;"> Prices</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <div class="container" style="background:rgba(0, 123, 128, 0.77);">
-      <h2 style="color:#fff;margin-top:10px;">Rooms Type</h2>
-     
-      <div class="row">
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <a href="/images/bg4.jpg" target="_blank">
-              <img src="/images/bg4.jpg" alt="Lights" style="width:100%">
-              <div class="caption">
-                <p>Standard Double Room </p>
-              </div>
-            </a>
-          </div>
+                 </div>
+                </div>
+                   
+              </p> 
+            <!-- end col -->
         </div>
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <a href="/images/bg4.jpg" target="_blank">
-              <img src="/images/bg4.jpg" alt="Lights" style="width:100%">
-              <div class="caption">
-                <p>Family Room with Balcony</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <a href="/images/bg4.jpg" target="_blank">
-              <img src="/images/bg4.jpg" alt="Lights" style="width:100%">
-              <div class="caption">
-                <p>Deluxe Double Room with Balcony</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <a href="/images/bg4.jpg" target="_blank">
-              <img src="/images/bg4.jpg" alt="Lights" style="width:100%">
-              <div class="caption">
-                <p>Triple Room</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+        <!-- end row -->
     </div>
+    <!-- end container -->
+</div>
+<!-- end reservations-main -->
+
+<div id="footer" class="footer-main">
+  
+      <!-- end container -->
+  </div>
+  <!-- end footer-news -->
+  <div class="footer-box pad-top-70">
+    
+          
+                  <div class="footer-logo">
+                      <div class="text-center">
+                          <img src="images/logo.png" alt="" />
+                          <h1 style="color:#f0c507;">Contact Us</h1>
+                          <div class="icon-bar">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <a  href="#"><i class="fab fa-facebook-f" style="color: white;font-size: 36px;"></i></a> 
+                            </div>
+                            <div class="col-md-3">
+                              <a href="#"><i class="fab fa-whatsapp" style="color: white;font-size: 36px;"></i></a>
+                            </div>
+                            <div class="col-md-3">
+                              <a href="#" class="active"><i class="fa fa-envelope" style="color: white;font-size: 36px;"></i></a> 
+                            </div>
+                            <div class="col-md-3">
+                              <a href="#"><i class="fa fa-phone" style="color: white;font-size: 36px;"></i></a>
+                            </div>
+                           
+                           
+                          </div> 
+                      </div>
+                  
+                 
+                
+             
+          <!-- end row -->
+      </div>
+      <!-- end container -->
+      <div id="copyright" class="copyright-main">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="copy-title"> Copyright &copy; 2017 Food Funday is powered by <a href="#" target="_blank"></a> </h6>
+                  </div>
+              </div>
+              <!-- end row -->
+          </div>
+          <!-- end container -->
+      </div>
+      <!-- end copyright-main -->
+  </div>
+  <!-- end footer-box -->
+</div>
+<!-- end footer-main -->
 <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
 <!-- Include jQuery -->
 <script type="text/javascript">
@@ -338,7 +320,19 @@ $('#datetimepicker3').datetimepicker({
 $('#date1').datetimepicker();
                         });
 </script>
+<script>
+  $(document).ready(function () {
+      $("#myselect").change(function () {
+
+          // var selectedVal = $("#myselect option:selected").text();
+          var selectedVal = $("#myselect option:selected").val();
+          alert("Hi, your favorite programming language is " + selectedVal);
+
+      });
+  });
+</script>
   <!-- About Section -->
 </body>
+  <!-- ALL JS FILES -->
 
 </html>
