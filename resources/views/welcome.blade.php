@@ -100,7 +100,7 @@
         <!-- end header -->
     </div>
 	<!-- end site-header -->
-	
+	<h1>hello</h1>
     <div id="banner" class="banner full-screen-mode parallax">
         <div class="container pr">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
